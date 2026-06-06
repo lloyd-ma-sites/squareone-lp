@@ -32,7 +32,7 @@ export default function Hero() {
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
-            href="https://www.linkedin.com/in/jc-yap"
+            href="https://www.linkedin.com/in/mrjcyap/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-12 items-center justify-center rounded-full bg-olive px-7 text-sm font-semibold text-cream transition-colors hover:bg-olive-dark"

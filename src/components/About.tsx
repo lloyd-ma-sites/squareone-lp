@@ -25,7 +25,9 @@ export default function About() {
             <h3 className="mt-2 font-serif text-2xl text-brown">JC Yap</h3>
             <p className="text-sm text-brown/70">Founder &amp; Principal Consultant</p>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/mrjcyap/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-olive hover:text-olive-dark"
             >
               LinkedIn <span aria-hidden>→</span>
