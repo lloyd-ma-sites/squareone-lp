@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 const navLinks = [
   { label: "About", href: "#about" },
@@ -12,11 +13,8 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-brown/10 bg-cream/90 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link
-          href="#top"
-          className="font-serif text-xl font-semibold tracking-tight text-brown"
-        >
-          SquareOne
+        <Link href="#top" aria-label="SquareOne — back to top" className="shrink-0">
+          <Logo className="h-8 w-auto text-brown sm:h-9" />
         </Link>
 
         <ul className="hidden items-center gap-8 text-sm font-medium text-brown/70 md:flex">

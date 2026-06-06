@@ -19,7 +19,7 @@ const steps = [
 export default function Approach() {
   return (
     <section id="approach" className="py-24">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="reveal mx-auto max-w-6xl px-6">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-olive">
           Our Approach
         </p>

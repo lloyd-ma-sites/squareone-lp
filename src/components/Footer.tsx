@@ -1,10 +1,12 @@
+import Logo from "@/components/Logo";
+
 export default function Footer() {
   return (
     <footer className="bg-brown-dark text-cream">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr]">
           <div>
-            <p className="font-serif text-2xl">SquareOne</p>
+            <Logo className="h-10 w-auto text-cream" />
             <p className="mt-4 max-w-md text-sm leading-7 text-cream/70">
               A boutique aged care advisory practice partnering with providers
               across Australia on clinical governance, compliance and operations.

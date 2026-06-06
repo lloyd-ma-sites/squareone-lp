@@ -23,7 +23,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-24">
-      <div className="mx-auto max-w-3xl px-6 text-center">
+      <div className="reveal mx-auto max-w-3xl px-6 text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-olive">
           Let&rsquo;s Connect
         </p>

@@ -40,7 +40,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="bg-sand py-24">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="reveal mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-olive">
             Our Services

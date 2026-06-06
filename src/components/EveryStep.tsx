@@ -27,7 +27,7 @@ const benefits = [
 export default function EveryStep() {
   return (
     <section id="every-step" className="bg-brown-dark py-24 text-cream">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="reveal mx-auto max-w-6xl px-6">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sage">
             Here at every step

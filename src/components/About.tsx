@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section id="about" className="bg-sand py-24">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="reveal mx-auto max-w-6xl px-6">
         <h2 className="max-w-3xl font-serif text-3xl font-medium leading-snug text-brown md:text-4xl">
           Before confidence. Before decisions. There must be understanding.
         </h2>
@@ -9,9 +9,16 @@ export default function About() {
         <div className="mt-16 grid gap-12 md:grid-cols-[280px_1fr]">
           {/* Founder card */}
           <div>
-            <div className="flex aspect-[4/5] items-center justify-center rounded-2xl bg-khaki/40 text-sm font-medium text-brown/50">
-              Founder photo
-            </div>
+            <video
+              src="/founder-video.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              className="aspect-square w-full rounded-2xl bg-brown-dark object-cover"
+            />
+
             <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-olive">
               Meet the Founder
             </p>

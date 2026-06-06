@@ -34,7 +34,7 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="py-24">
-      <div className="mx-auto max-w-4xl px-6 text-center">
+      <div className="reveal mx-auto max-w-4xl px-6 text-center">
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-olive">
           Trusted by aged care providers
         </p>

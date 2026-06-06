@@ -8,7 +8,7 @@ const posts = [
 export default function Insights() {
   return (
     <section id="insights" className="bg-sand py-24">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="reveal mx-auto max-w-6xl px-6">
         <div className="max-w-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-olive">
             Insights and Updates
