@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f3ea;
+  --foreground: #3a3127;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
+  --font-serif: var(--font-lora);
   --font-mono: var(--font-geist-mono);
+
+  /* Brand palette — minimalist aged-care advisory.
+     Edit these to re-skin the whole site. */
+  --color-cream: #f7f3ea;     /* page background */
+  --color-sand: #efe7d6;      /* soft section background */
+  --color-khaki: #c7b48f;     /* warm accent */
+  --color-sage: #9fae93;      /* muted green accent */
+  --color-olive: #6f7250;     /* primary accent */
+  --color-olive-dark: #565839;
+  --color-brown: #4a3f33;     /* body text / ink */
+  --color-brown-dark: #2f2820; /* dark sections */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }

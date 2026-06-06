@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SquareOne LP
 
-## Getting Started
+A Next.js + Tailwind landing page. Layout modeled on a B2B consulting site, built
+with placeholder content so you can edit it section by section.
 
-First, run the development server:
+## Editing
+
+Each section is its own component in `src/components/`:
+
+| Section       | File                              |
+| ------------- | --------------------------------- |
+| Top nav       | `src/components/Navbar.tsx`       |
+| Hero          | `src/components/Hero.tsx`         |
+| Services grid | `src/components/Services.tsx`     |
+| Process steps | `src/components/Process.tsx`      |
+| Projects      | `src/components/Projects.tsx`     |
+| Testimonials  | `src/components/Testimonials.tsx` |
+| News / blog   | `src/components/News.tsx`         |
+| Footer        | `src/components/Footer.tsx`       |
+
+The page is assembled in `src/app/page.tsx` — comment out a line to drop a section.
+
+Brand colors live in `src/app/globals.css` under `@theme inline` (`--color-brand-*`,
+`--color-ink`). Change those to re-skin the whole site.
+
+## Run locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Deploy
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1. Push to GitHub
+```bash
+git remote add origin https://github.com/lloyd-ma-sites/squareone-lp.git
+git add -A
+git commit -m "Initial landing page"
+git push -u origin main
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2. Vercel
+- Import the repo at vercel.com/new — it auto-detects Next.js, no config needed.
+- Every push to `main` redeploys.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. Point your GoDaddy domain
+- In Vercel: Project → Settings → Domains → add your domain.
+- In GoDaddy DNS, add the records Vercel shows you:
+  - Apex (`yourdomain.com`): `A` record → `76.76.21.21`
+  - `www`: `CNAME` → `cname.vercel-dns.com`
+- DNS can take up to a few hours to propagate.
