@@ -9,6 +9,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import ScrollReveal from "@/components/ScrollReveal";
+import CursorEffect from "@/components/CursorEffect";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Footer />
       <BackToTop />
       <ScrollReveal />
+      <CursorEffect />
     </>
   );
 }
