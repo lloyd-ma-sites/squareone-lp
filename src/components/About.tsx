@@ -5,9 +5,9 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative overflow-hidden bg-brown-dark py-20 text-cream"
+      className="relative overflow-hidden bg-brown-dark/75 py-20 text-cream"
     >
-      {/* Faded founder video background (temporary) */}
+      {/* Faded founder video (temporary) */}
       <video
         src="/founder-video.mp4"
         autoPlay
@@ -16,9 +16,8 @@ export default function About() {
         playsInline
         preload="auto"
         aria-hidden
-        className="absolute inset-0 -z-20 h-full w-full object-cover opacity-20"
+        className="absolute inset-0 -z-10 h-full w-full object-cover opacity-15"
       />
-      <div className="absolute inset-0 -z-10 bg-brown-dark/80" />
 
       <div className="reveal relative mx-auto max-w-6xl px-6">
         <SectionLabel label="About" code="S1.1" dark />
