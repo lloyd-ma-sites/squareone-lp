@@ -53,6 +53,21 @@ export default function Hero() {
               Explore services
             </a>
           </div>
+
+          <div className="mt-10 max-w-2xl space-y-4 font-mono text-sm leading-relaxed text-cream/70">
+            <p>
+              We&rsquo;re a boutique advisory practice working closely with a
+              select number of providers to ensure every engagement receives the
+              depth of attention it requires. Our model prioritises quality of
+              engagement over volume, allowing us to provide a level of
+              responsiveness, continuity and insight that is often lost in
+              larger-scale consulting environments.
+            </p>
+            <p>
+              More than consultants, we&rsquo;re a trusted partner in all things
+              clinical, compliance and operations.
+            </p>
+          </div>
         </div>
       </div>
     </section>
