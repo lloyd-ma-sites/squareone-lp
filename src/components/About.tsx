@@ -67,7 +67,7 @@ export default function About() {
           </div>
 
           {/* Founder narrative */}
-          <div className="space-y-5 text-lg leading-8 text-cream/80">
+          <div className="space-y-5 font-mono text-base leading-7 text-cream/80">
             <p>
               Aged care is complex. Regulatory expectations continue to evolve,
               workforce challenges persist, and providers are expected to deliver

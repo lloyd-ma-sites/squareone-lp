@@ -41,7 +41,7 @@ export default function EveryStep() {
           Here at every step.
         </h2>
 
-        <p className="reveal mt-8 max-w-2xl text-lg leading-8 text-cream/70">
+        <p className="reveal mt-8 max-w-2xl font-mono text-base leading-7 text-cream/70">
           Navigating stakeholder expectations can feel like a balancing act for
           boards, executives, management, and clinicians. We work with single-site
           and multi-facility providers &mdash; every provider operates within its
