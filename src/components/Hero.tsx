@@ -4,17 +4,8 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate flex min-h-[90vh] flex-col overflow-hidden bg-brown-dark text-cream"
+      className="relative flex min-h-[90vh] flex-col overflow-hidden bg-brown-dark/75 text-cream"
     >
-      {/* Hero background image */}
-      <div
-        aria-hidden
-        className="absolute inset-0 -z-20 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero-background.png')" }}
-      />
-      {/* Overlay for legibility */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-brown-dark via-brown-dark/75 to-brown-dark/45" />
-
       <div className="hero-enter relative mx-auto flex w-full max-w-6xl flex-1 flex-col px-6">
         {/* Tagline, upper-right */}
         <div className="flex justify-end pt-28 md:pt-32">
