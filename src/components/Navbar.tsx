@@ -13,13 +13,12 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-olive/15 bg-cream/90 backdrop-blur">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        {/* Logo in a bordered box (peg style) */}
         <Link
           href="#top"
           aria-label="SquareOne — back to top"
-          className="flex items-center border border-olive/30 px-3 py-1.5"
+          className="flex items-center"
         >
-          <Logo className="h-7 w-auto" />
+          <Logo className="h-5 w-auto sm:h-6" />
         </Link>
 
         <ul className="hidden items-center gap-7 font-mono text-xs uppercase tracking-[0.15em] text-brown/70 md:flex">

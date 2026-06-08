@@ -1,4 +1,3 @@
-import GridLines from "@/components/GridLines";
 import SectionLabel from "@/components/SectionLabel";
 
 const services = [
@@ -42,9 +41,8 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="relative overflow-hidden bg-sand py-20">
-      <GridLines />
-      <div className="relative mx-auto max-w-6xl px-6">
+    <section id="services" className="bg-sand py-20">
+      <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Services" code="S1.3" />
 
         {/* Giant split headline (peg style) */}

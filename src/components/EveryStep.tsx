@@ -1,4 +1,3 @@
-import GridLines from "@/components/GridLines";
 import SectionLabel from "@/components/SectionLabel";
 
 const steps = [
@@ -37,9 +36,8 @@ const benefits = [
 
 export default function EveryStep() {
   return (
-    <section id="every-step" className="relative overflow-hidden bg-brown-dark py-20 text-cream">
-      <GridLines dark />
-      <div className="relative mx-auto max-w-6xl px-6">
+    <section id="every-step" className="bg-brown-dark py-20 text-cream">
+      <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Process" code="S1.4" dark />
 
         {/* Giant headline (peg style) */}

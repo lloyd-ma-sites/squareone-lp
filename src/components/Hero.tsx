@@ -1,18 +1,18 @@
-import GridLines from "@/components/GridLines";
-
 export default function Hero() {
   return (
     <section
       id="top"
       className="relative isolate flex min-h-[90vh] flex-col overflow-hidden bg-brown-dark text-cream"
     >
-      {/* Background photo — drop a licensed image at public/hero.jpg to enable */}
+      {/* Full wordmark watermark background (no frame) */}
       <div
-        className="absolute inset-0 -z-20 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: "url('/hero.jpg')" }}
+        aria-hidden
+        className="pointer-events-none absolute inset-0 -z-10 bg-center bg-no-repeat opacity-[0.07] invert"
+        style={{
+          backgroundImage: "url('/squareone-wordmark.png')",
+          backgroundSize: "130% auto",
+        }}
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-brown-dark via-brown-dark/85 to-brown-dark/70" />
-      <GridLines dark />
 
       <div className="hero-enter relative mx-auto flex w-full max-w-6xl flex-1 flex-col px-6">
         {/* Tagline, upper-right (peg style) */}
@@ -25,9 +25,6 @@ export default function Hero() {
 
         {/* Giant headline, lower-left (peg style) */}
         <div className="mt-auto pb-16 md:pb-24">
-          <p className="mb-6 font-mono text-xs uppercase tracking-[0.2em] text-sage">
-            Aged Care Advisory
-          </p>
           <h1 className="max-w-5xl font-sans text-6xl font-medium leading-[0.95] tracking-tight md:text-8xl">
             Driving confidence in aged care.
           </h1>

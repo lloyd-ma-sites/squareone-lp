@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import GridLines from "@/components/GridLines";
 import SectionLabel from "@/components/SectionLabel";
 
 const testimonials = [
@@ -38,9 +37,8 @@ export default function Testimonials() {
   const go = (dir: number) => setIndex((i) => (i + dir + total) % total);
 
   return (
-    <section id="testimonials" className="relative overflow-hidden bg-cream py-20">
-      <GridLines />
-      <div className="relative mx-auto max-w-6xl px-6">
+    <section id="testimonials" className="bg-cream py-20">
+      <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Testimonials" code="S1.5" />
 
         {/* Big attribution (peg style) */}

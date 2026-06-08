@@ -7,16 +7,16 @@ type LogoProps = {
 };
 
 /**
- * SquareOne logo — the real wordmark asset (white background stripped to
- * transparent). On dark backgrounds pass `light` to render it white.
+ * SquareOne wordmark (no frame) — extracted from the real logo asset.
+ * On dark backgrounds pass `light` to render it white.
  */
 export default function Logo({ className, light }: LogoProps) {
   return (
     <Image
-      src="/squareone-logo.png"
+      src="/squareone-wordmark.png"
       alt="SquareOne"
-      width={294}
-      height={157}
+      width={1415}
+      height={194}
       className={[className, light ? "invert" : ""].filter(Boolean).join(" ")}
     />
   );

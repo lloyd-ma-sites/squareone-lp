@@ -1,5 +1,3 @@
-import GridLines from "@/components/GridLines";
-
 // Placeholder articles — replace as you publish.
 const posts = [
   { date: "—", category: "Article", title: "Your first article will appear here" },
@@ -9,9 +7,8 @@ const posts = [
 
 export default function Insights() {
   return (
-    <section id="insights" className="relative overflow-hidden bg-sand py-20">
-      <GridLines />
-      <div className="relative mx-auto max-w-6xl px-6">
+    <section id="insights" className="bg-sand py-20">
+      <div className="mx-auto max-w-6xl px-6">
         {/* Label row with inline action (peg style) */}
         <div className="flex items-center justify-between border-b border-olive/20 pb-3 font-mono text-xs uppercase tracking-[0.2em] text-olive">
           <span>Latest News</span>
