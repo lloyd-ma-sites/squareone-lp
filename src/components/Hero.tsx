@@ -1,21 +1,22 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section
       id="top"
       className="relative isolate flex min-h-[90vh] flex-col overflow-hidden bg-brown-dark text-cream"
     >
-      {/* Full wordmark watermark background (no frame) */}
+      {/* Hero background image */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-center bg-no-repeat opacity-[0.07] invert"
-        style={{
-          backgroundImage: "url('/squareone-logo.png')",
-          backgroundSize: "min(90%, 1100px) auto",
-        }}
+        className="absolute inset-0 -z-20 bg-cover bg-center"
+        style={{ backgroundImage: "url('/hero-background.png')" }}
       />
+      {/* Overlay for legibility */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-brown-dark via-brown-dark/75 to-brown-dark/45" />
 
       <div className="hero-enter relative mx-auto flex w-full max-w-6xl flex-1 flex-col px-6">
-        {/* Tagline, upper-right (peg style) */}
+        {/* Tagline, upper-right */}
         <div className="flex justify-end pt-28 md:pt-32">
           <p className="max-w-xs text-right font-mono text-xs uppercase leading-relaxed tracking-[0.15em] text-cream/70">
             A boutique advisory partner in all things clinical, compliance &amp;
@@ -23,8 +24,17 @@ export default function Hero() {
           </p>
         </div>
 
-        {/* Giant headline, lower-left (peg style) */}
+        {/* Wordmark + giant headline, lower-left */}
         <div className="mt-auto pb-16 md:pb-24">
+          <Image
+            src="/squareone-wordmark.png"
+            alt="SquareOne"
+            width={1415}
+            height={194}
+            priority
+            className="mb-8 h-9 w-auto invert md:h-12"
+          />
+
           <h1 className="max-w-5xl font-sans text-6xl font-medium leading-[0.95] tracking-tight md:text-8xl">
             Driving confidence in aged care.
           </h1>
