@@ -41,17 +41,17 @@ export default function Testimonials() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Testimonials" code="S1.5" />
 
-        {/* Big attribution (peg style) */}
-        <h2 className="reveal mt-10 font-sans text-5xl font-medium leading-none tracking-tight text-olive md:text-7xl">
-          {current.role}
+        <h2 className="reveal mt-10 max-w-3xl font-sans text-4xl font-medium leading-[1.05] tracking-tight text-olive md:text-6xl">
+          Trusted by aged care providers.
         </h2>
-        <p className="reveal mt-3 font-mono text-xs uppercase tracking-[0.2em] text-brown/60">
-          {current.org}
-        </p>
 
-        <blockquote className="reveal mt-10 max-w-4xl font-mono text-xl font-medium leading-relaxed text-brown md:text-2xl">
+        <blockquote className="reveal mt-12 max-w-3xl font-mono text-base leading-7 text-brown">
           &ldquo;{current.quote}&rdquo;
         </blockquote>
+
+        <p className="reveal mt-6 font-mono text-sm text-brown/70">
+          &mdash; {current.role}, {current.org}
+        </p>
 
         <div className="mt-12 flex items-center gap-6">
           <button
