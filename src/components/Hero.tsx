@@ -1,36 +1,40 @@
-import Logo from "@/components/Logo";
+const trust = [
+  { label: "Senior-led", detail: "Direct access to senior expertise" },
+  { label: "Boutique", detail: "Quality of engagement over volume" },
+  { label: "Australia-wide", detail: "Partnering with providers nationally" },
+];
 
 export default function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate flex min-h-[90vh] items-center justify-center overflow-hidden"
+      className="relative isolate overflow-hidden bg-brown-dark text-cream"
     >
-      {/* Base warm gradient (shows if no photo is set) */}
-      <div className="absolute inset-0 -z-20 bg-gradient-to-br from-brown-dark via-olive-dark to-brown" />
-
       {/* Background photo — drop a licensed image at public/hero.jpg to enable */}
       <div
-        className="absolute inset-0 -z-10 bg-cover bg-center opacity-55"
+        className="absolute inset-0 -z-10 bg-cover bg-center opacity-25"
         style={{ backgroundImage: "url('/hero.jpg')" }}
       />
+      {/* Overlay for legibility */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brown-dark via-brown-dark/90 to-brown-dark/60" />
 
-      {/* Darkening overlay for text legibility */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-brown-dark/90 via-brown-dark/55 to-brown-dark/75" />
-
-      <div className="hero-enter mx-auto max-w-4xl px-6 text-center text-cream">
-        <Logo className="mx-auto h-16 w-auto sm:h-20 md:h-24" />
-
-        <h1 className="mt-10 font-serif text-4xl font-medium leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
-          Driving confidence in aged care.
-        </h1>
-
-        <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-cream/80">
-          A boutique advisory partner in all things clinical, compliance and
-          operations.
+      <div className="hero-enter mx-auto max-w-6xl px-6 py-28 md:py-36">
+        <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-sage">
+          Aged Care Advisory
         </p>
 
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <h1 className="max-w-3xl font-serif text-4xl font-medium leading-[1.1] tracking-tight md:text-6xl">
+          Driving confidence in aged care starts with SquareOne.
+        </h1>
+
+        <p className="mt-8 max-w-2xl text-lg leading-8 text-cream/75">
+          We&rsquo;re a boutique advisory practice working closely with a select
+          number of providers, prioritising quality of engagement over volume.
+          More than consultants, we&rsquo;re a trusted partner in all things
+          clinical, compliance and operations.
+        </p>
+
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           <a
             href="https://www.linkedin.com/in/mrjcyap/"
             target="_blank"
@@ -46,24 +50,17 @@ export default function Hero() {
             Explore our services
           </a>
         </div>
-      </div>
 
-      {/* Scroll cue */}
-      <a
-        href="#intro"
-        aria-label="Scroll down"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-cream/60 transition-colors hover:text-cream"
-      >
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden>
-          <path
-            d="M6 9l6 6 6-6"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </a>
+        {/* Trust strip (peg uses a stats row here) */}
+        <dl className="mt-16 grid max-w-2xl grid-cols-1 gap-8 border-t border-cream/15 pt-8 sm:grid-cols-3">
+          {trust.map((item) => (
+            <div key={item.label}>
+              <dt className="font-serif text-2xl">{item.label}</dt>
+              <dd className="mt-1 text-sm text-cream/60">{item.detail}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
     </section>
   );
 }

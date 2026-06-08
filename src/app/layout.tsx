@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Lora } from "next/font/google";
+import { Geist, Geist_Mono, Lora, Jost } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -17,6 +17,11 @@ const lora = Lora({
   subsets: ["latin"],
 });
 
+const jost = Jost({
+  variable: "--font-jost",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
   title: "SquareOne Solutions — Aged Care Advisory",
   description:
@@ -31,7 +36,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${lora.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${lora.variable} ${jost.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">{children}</body>
     </html>

@@ -20,26 +20,27 @@ export default function Logo({ className }: LogoProps) {
       {/* Bracket frame — two halves with center gaps top & bottom */}
       <g
         stroke="currentColor"
-        strokeWidth={10}
+        strokeWidth={9}
         strokeLinecap="round"
         strokeLinejoin="round"
-        opacity={0.8}
+        opacity={0.85}
       >
-        <path d="M410 10 L290 10 Q230 10 230 70 L230 370 Q230 430 290 430 L410 430" />
-        <path d="M530 10 L650 10 Q710 10 710 70 L710 370 Q710 430 650 430 L530 430" />
+        <path d="M410 10 L300 10 Q230 10 230 80 L230 360 Q230 430 300 430 L410 430" />
+        <path d="M530 10 L640 10 Q710 10 710 80 L710 360 Q710 430 640 430 L530 430" />
       </g>
 
-      {/* Wordmark */}
+      {/* Wordmark — geometric font, width locked so spacing is even */}
       <text
         x="470"
-        y="220"
+        y="222"
         textAnchor="middle"
         dominantBaseline="central"
-        className="font-sans"
+        textLength="820"
+        lengthAdjust="spacingAndGlyphs"
         fill="currentColor"
-        fontSize="140"
-        fontWeight="300"
-        letterSpacing="2"
+        fontSize="160"
+        fontWeight="400"
+        style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
       >
         SQUAREONE
       </text>
