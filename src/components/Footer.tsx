@@ -7,7 +7,7 @@ const columns = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brown-dark/90 text-cream">
+    <footer className="bg-brown-dark/75 text-cream">
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr]">
           {/* Brand */}

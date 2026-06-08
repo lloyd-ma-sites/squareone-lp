@@ -41,7 +41,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-sand/90 py-20">
+    <section id="services" className="bg-sand/75 py-20">
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Services" code="S1.3" />
 

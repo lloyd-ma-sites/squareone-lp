@@ -37,7 +37,7 @@ export default function Testimonials() {
   const go = (dir: number) => setIndex((i) => (i + dir + total) % total);
 
   return (
-    <section id="testimonials" className="bg-cream/90 py-20">
+    <section id="testimonials" className="bg-cream/75 py-20">
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Testimonials" code="S1.5" />
 

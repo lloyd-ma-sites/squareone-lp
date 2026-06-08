@@ -20,7 +20,7 @@ import SectionLabel from "@/components/SectionLabel";
 
 export default function Approach() {
   return (
-    <section id="approach" className="bg-sand/90 py-20">
+    <section id="approach" className="bg-sand/75 py-20">
       <div className="reveal mx-auto max-w-6xl px-6">
         <SectionLabel label="Approach" code="S1.2" />
 

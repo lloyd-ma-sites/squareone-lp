@@ -22,7 +22,7 @@ export default function Contact() {
     "w-full rounded-lg border border-brown/20 bg-cream px-4 py-3 text-brown placeholder-brown/40 focus:border-olive focus:outline-none focus:ring-1 focus:ring-olive";
 
   return (
-    <section id="contact" className="bg-cream/90 py-24">
+    <section id="contact" className="bg-cream/75 py-24">
       <div className="reveal mx-auto max-w-3xl px-6 text-center">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-olive">
           Let&rsquo;s Connect
