@@ -47,7 +47,7 @@ export default function Services() {
 
         {/* Giant headline */}
         <h2 className="reveal mt-10 mb-14 font-sans text-6xl font-medium leading-none tracking-tight text-olive md:text-8xl">
-          Our Services
+          Services
         </h2>
 
         {/* Service rows */}
