@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-16">
         <div className="grid gap-12 md:grid-cols-[1.5fr_1fr]">
           <div>
-            <Logo className="h-10 w-auto text-cream" />
+            <Logo light className="h-11 w-auto" />
             <p className="mt-4 max-w-md text-sm leading-7 text-cream/70">
               A boutique aged care advisory practice partnering with providers
               across Australia on clinical governance, compliance and operations.

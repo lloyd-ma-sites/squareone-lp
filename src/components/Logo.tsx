@@ -1,49 +1,23 @@
+import Image from "next/image";
+
 type LogoProps = {
   className?: string;
+  /** Invert to white for dark backgrounds (e.g. the footer). */
+  light?: boolean;
 };
 
 /**
- * SquareOne wordmark — inline SVG so it scales crisply at any size and
- * inherits color via `currentColor` (set text color with Tailwind, e.g.
- * `text-brown` in the nav or `text-cream` in the footer).
+ * SquareOne logo — the real wordmark asset (white background stripped to
+ * transparent). On dark backgrounds pass `light` to render it white.
  */
-export default function Logo({ className }: LogoProps) {
+export default function Logo({ className, light }: LogoProps) {
   return (
-    <svg
-      viewBox="0 0 940 440"
-      role="img"
-      aria-label="SquareOne"
-      className={className}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Bracket frame — two halves with center gaps top & bottom */}
-      <g
-        stroke="currentColor"
-        strokeWidth={9}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        opacity={0.85}
-      >
-        <path d="M410 10 L300 10 Q230 10 230 80 L230 360 Q230 430 300 430 L410 430" />
-        <path d="M530 10 L640 10 Q710 10 710 80 L710 360 Q710 430 640 430 L530 430" />
-      </g>
-
-      {/* Wordmark — geometric font, width locked so spacing is even */}
-      <text
-        x="470"
-        y="222"
-        textAnchor="middle"
-        dominantBaseline="central"
-        textLength="820"
-        lengthAdjust="spacingAndGlyphs"
-        fill="currentColor"
-        fontSize="160"
-        fontWeight="400"
-        style={{ fontFamily: "var(--font-jost), system-ui, sans-serif" }}
-      >
-        SQUAREONE
-      </text>
-    </svg>
+    <Image
+      src="/squareone-logo.png"
+      alt="SquareOne"
+      width={294}
+      height={157}
+      className={[className, light ? "invert" : ""].filter(Boolean).join(" ")}
+    />
   );
 }
