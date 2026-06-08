@@ -1,44 +1,73 @@
+import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
 
 export default function About() {
   return (
-    <section id="about" className="bg-cream py-20">
-      <div className="reveal mx-auto max-w-6xl px-6">
-        <SectionLabel label="About" code="S1.1" />
-        <h2 className="mt-10 max-w-4xl font-sans text-4xl font-medium leading-[1.05] tracking-tight text-brown md:text-6xl">
+    <section
+      id="about"
+      className="relative overflow-hidden bg-brown-dark py-20 text-cream"
+    >
+      {/* Faded founder video background (temporary) */}
+      <video
+        src="/founder-video.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        aria-hidden
+        className="absolute inset-0 -z-20 h-full w-full object-cover opacity-20"
+      />
+      <div className="absolute inset-0 -z-10 bg-brown-dark/80" />
+
+      <div className="reveal relative mx-auto max-w-6xl px-6">
+        <SectionLabel label="About" code="S1.1" dark />
+
+        <h2 className="mt-10 max-w-4xl font-sans text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl">
           Before confidence. Before decisions. There must be understanding.
         </h2>
 
-        <div className="mt-16 grid gap-12 md:grid-cols-[280px_1fr]">
-          {/* Founder card */}
+        <div className="mt-16 grid gap-12 lg:grid-cols-2">
+          {/* Founder portraits */}
           <div>
-            <video
-              src="/founder-video.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              className="aspect-square w-full rounded-2xl bg-brown-dark object-cover"
-            />
+            <div className="grid grid-cols-2 gap-3">
+              {[1, 2, 3, 4].map((n) => (
+                <div
+                  key={n}
+                  className="relative aspect-[2/3] overflow-hidden rounded-lg bg-brown/40"
+                >
+                  <Image
+                    src={`/founder-image-${n}.jpeg`}
+                    alt={`JC Yap, Founder of SquareOne`}
+                    fill
+                    sizes="(max-width: 1024px) 50vw, 25vw"
+                    className="object-cover"
+                  />
+                </div>
+              ))}
+            </div>
 
-            <p className="mt-5 text-xs font-semibold uppercase tracking-[0.2em] text-olive">
-              Meet the Founder
-            </p>
-            <h3 className="mt-2 font-serif text-2xl text-brown">JC Yap</h3>
-            <p className="text-sm text-brown/70">Founder &amp; Principal Consultant</p>
-            <a
-              href="https://www.linkedin.com/in/mrjcyap/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-olive hover:text-olive-dark"
-            >
-              LinkedIn <span aria-hidden>→</span>
-            </a>
+            <div className="mt-6">
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-sage">
+                Meet the Founder
+              </p>
+              <h3 className="mt-2 font-sans text-2xl font-medium">JC Yap</h3>
+              <p className="text-sm text-cream/70">
+                Founder &amp; Principal Consultant
+              </p>
+              <a
+                href="https://www.linkedin.com/in/mrjcyap/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-1 font-mono text-xs uppercase tracking-widest text-sage hover:text-cream"
+              >
+                LinkedIn <span aria-hidden>→</span>
+              </a>
+            </div>
           </div>
 
           {/* Founder narrative */}
-          <div className="space-y-5 text-lg leading-8 text-brown/80">
+          <div className="space-y-5 text-lg leading-8 text-cream/80">
             <p>
               Aged care is complex. Regulatory expectations continue to evolve,
               workforce challenges persist, and providers are expected to deliver

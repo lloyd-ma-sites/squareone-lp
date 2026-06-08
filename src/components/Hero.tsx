@@ -9,8 +9,8 @@ export default function Hero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-center bg-no-repeat opacity-[0.07] invert"
         style={{
-          backgroundImage: "url('/squareone-wordmark.png')",
-          backgroundSize: "130% auto",
+          backgroundImage: "url('/squareone-logo.png')",
+          backgroundSize: "min(90%, 1100px) auto",
         }}
       />
 

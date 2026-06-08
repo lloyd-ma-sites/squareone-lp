@@ -18,7 +18,7 @@ export default function Navbar() {
           aria-label="SquareOne — back to top"
           className="flex items-center"
         >
-          <Logo className="h-5 w-auto sm:h-6" />
+          <Logo className="h-9 w-auto sm:h-10" />
         </Link>
 
         <ul className="hidden items-center gap-7 font-mono text-xs uppercase tracking-[0.15em] text-brown/70 md:flex">
