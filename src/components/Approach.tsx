@@ -31,7 +31,7 @@ export default function Approach() {
         <ol className="grid gap-10 md:grid-cols-3">
           {steps.map((step) => (
             <li key={step.n}>
-              <span className="font-serif text-5xl text-khaki">{step.n}</span>
+              <span className="font-serif text-5xl text-olive">{step.n}</span>
               <h3 className="mt-4 font-serif text-xl text-brown">{step.title}</h3>
               <p className="mt-3 leading-7 text-brown/75">{step.desc}</p>
             </li>
