@@ -1,7 +1,10 @@
+import GridLines from "@/components/GridLines";
+import SectionLabel from "@/components/SectionLabel";
+
 const services = [
   {
     title: "Quality Assurance & Improvement",
-    desc: "Review and strengthening of quality systems, audit programs, and continuous improvement processes aligned to regulatory expectations.",
+    desc: "Review and strengthening of quality systems, audit programs, and continuous improvement processes.",
   },
   {
     title: "Clinical Governance",
@@ -9,11 +12,11 @@ const services = [
   },
   {
     title: "Board Advisory",
-    desc: "Governance-certified independent clinical advisory to Boards and Committees to support oversight, risk management and informed decision-making.",
+    desc: "Independent clinical advisory to Boards and Committees to support oversight, risk management and informed decisions.",
   },
   {
     title: "Compliance Remediation",
-    desc: "Targeted support to address identified gaps, stabilise risk areas, and implement corrective actions aligned to regulatory expectations.",
+    desc: "Targeted support to address identified gaps, stabilise risk areas, and implement corrective actions.",
   },
   {
     title: "External Audit & Regulatory Readiness",
@@ -21,7 +24,7 @@ const services = [
   },
   {
     title: "Clinical Funding",
-    desc: "AN-ACC advisory and AN-ACC optimisation to support sustainable, accurate clinical funding.",
+    desc: "AN-ACC advisory and optimisation to support sustainable, accurate clinical funding.",
   },
   {
     title: "Operational & Clinical Leadership",
@@ -29,7 +32,7 @@ const services = [
   },
   {
     title: "Workforce Capability Development",
-    desc: "Education and coaching aligned to clinical practice and regulatory requirements, focused on building capability and supporting sustainable practice.",
+    desc: "Education and coaching aligned to clinical practice and regulatory requirements.",
   },
   {
     title: "Bespoke Advisory",
@@ -39,28 +42,51 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-sand py-24">
-      <div className="reveal mx-auto max-w-6xl px-6">
-        <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-olive">
-            Our Services
-          </p>
-          <h2 className="mt-3 font-serif text-3xl font-medium text-brown md:text-4xl">
-            What we have supported providers with.
+    <section id="services" className="relative overflow-hidden bg-sand py-20">
+      <GridLines />
+      <div className="relative mx-auto max-w-6xl px-6">
+        <SectionLabel label="Services" code="S1.3" />
+
+        {/* Giant split headline (peg style) */}
+        <div className="reveal mt-10 mb-14 flex flex-wrap items-baseline justify-between gap-x-6">
+          <h2 className="font-sans text-6xl font-medium leading-none tracking-tight text-olive md:text-8xl">
+            Our
+          </h2>
+          <h2 className="font-sans text-6xl font-medium leading-none tracking-tight text-olive md:text-8xl">
+            Services
           </h2>
         </div>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Service rows */}
+        <ul className="reveal border-t border-brown/15">
           {services.map((service) => (
-            <div
-              key={service.title}
-              className="rounded-2xl border border-brown/10 bg-cream p-7 transition-shadow hover:shadow-md"
-            >
-              <h3 className="font-serif text-lg text-brown">{service.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-brown/75">{service.desc}</p>
-            </div>
+            <li key={service.title}>
+              <a
+                href="#contact"
+                className="group grid gap-2 border-b border-brown/15 py-6 transition-colors hover:bg-cream/60 md:grid-cols-[1fr_2fr_auto] md:items-center md:gap-8"
+              >
+                <h3 className="font-sans text-xl font-medium text-brown md:text-2xl">
+                  {service.title}
+                </h3>
+                <p className="text-sm leading-6 text-brown/70">{service.desc}</p>
+                <span
+                  aria-hidden
+                  className="font-mono text-lg text-olive transition-transform group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </a>
+            </li>
           ))}
-        </div>
+        </ul>
+
+        {/* Full-width bar button (peg style) */}
+        <a
+          href="#contact"
+          className="reveal mt-10 flex h-16 w-full items-center justify-center bg-olive font-mono text-sm uppercase tracking-[0.2em] text-cream transition-colors hover:bg-olive-dark"
+        >
+          View all services
+        </a>
       </div>
     </section>
   );

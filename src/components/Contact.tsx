@@ -24,10 +24,10 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24">
       <div className="reveal mx-auto max-w-3xl px-6 text-center">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-olive">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-olive">
           Let&rsquo;s Connect
         </p>
-        <h2 className="mt-3 font-serif text-3xl font-medium text-brown md:text-4xl">
+        <h2 className="mt-4 font-sans text-4xl font-medium tracking-tight text-brown md:text-6xl">
           Drop us a line and let&rsquo;s connect.
         </h2>
         <p className="mt-4 text-lg leading-8 text-brown/75">

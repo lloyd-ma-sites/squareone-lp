@@ -1,8 +1,13 @@
+import GridLines from "@/components/GridLines";
+import SectionLabel from "@/components/SectionLabel";
+
 export default function About() {
   return (
-    <section id="about" className="bg-sand py-24">
-      <div className="reveal mx-auto max-w-6xl px-6">
-        <h2 className="max-w-3xl font-serif text-3xl font-medium leading-snug text-brown md:text-4xl">
+    <section id="about" className="relative overflow-hidden bg-cream py-20">
+      <GridLines />
+      <div className="reveal relative mx-auto max-w-6xl px-6">
+        <SectionLabel label="About" code="S1.1" />
+        <h2 className="mt-10 max-w-4xl font-sans text-4xl font-medium leading-[1.05] tracking-tight text-brown md:text-6xl">
           Before confidence. Before decisions. There must be understanding.
         </h2>
 

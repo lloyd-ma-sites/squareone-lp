@@ -16,15 +16,21 @@ const steps = [
   },
 ];
 
+import GridLines from "@/components/GridLines";
+import SectionLabel from "@/components/SectionLabel";
+
 export default function Approach() {
   return (
-    <section id="approach" className="py-24">
-      <div className="reveal mx-auto max-w-6xl px-6">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-olive">
-          Our Approach
-        </p>
+    <section id="approach" className="relative overflow-hidden bg-sand py-20">
+      <GridLines />
+      <div className="reveal relative mx-auto max-w-6xl px-6">
+        <SectionLabel label="Approach" code="S1.2" />
 
-        <ol className="mt-12 grid gap-10 md:grid-cols-3">
+        <h2 className="mt-10 mb-12 max-w-4xl font-sans text-4xl font-medium leading-[1.05] tracking-tight text-olive md:text-6xl">
+          A proven path from start to sign-off.
+        </h2>
+
+        <ol className="grid gap-10 md:grid-cols-3">
           {steps.map((step) => (
             <li key={step.n}>
               <span className="font-serif text-5xl text-khaki">{step.n}</span>
