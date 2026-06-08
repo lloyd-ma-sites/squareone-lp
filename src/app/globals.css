@@ -82,25 +82,25 @@ body {
 @keyframes cursor-ripple {
   from {
     transform: translate(-50%, -50%) scale(0.4);
-    opacity: 0.3;
+    opacity: 0.5;
   }
   to {
-    transform: translate(-50%, -50%) scale(2.6);
+    transform: translate(-50%, -50%) scale(2.8);
     opacity: 0;
   }
 }
 
 .cursor-ripple {
   position: absolute;
-  width: 64px;
-  height: 64px;
+  width: 96px;
+  height: 96px;
   border-radius: 9999px;
   background: radial-gradient(
     circle,
-    rgba(111, 114, 80, 0.35) 0%,
-    rgba(111, 114, 80, 0) 70%
+    rgba(111, 114, 80, 0.55) 0%,
+    rgba(111, 114, 80, 0) 72%
   );
-  animation: cursor-ripple 0.9s ease-out forwards;
+  animation: cursor-ripple 1s ease-out forwards;
 }
 
 /* ---- Custom scrollbar (beige track, olive bar, brown arrows) ---- */
