@@ -45,15 +45,10 @@ export default function Services() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Services" code="S1.3" />
 
-        {/* Giant split headline (peg style) */}
-        <div className="reveal mt-10 mb-14 flex flex-wrap items-baseline justify-between gap-x-6">
-          <h2 className="font-sans text-6xl font-medium leading-none tracking-tight text-olive md:text-8xl">
-            Our
-          </h2>
-          <h2 className="font-sans text-6xl font-medium leading-none tracking-tight text-olive md:text-8xl">
-            Services
-          </h2>
-        </div>
+        {/* Giant headline */}
+        <h2 className="reveal mt-10 mb-14 font-sans text-6xl font-medium leading-none tracking-tight text-olive md:text-8xl">
+          Our Services
+        </h2>
 
         {/* Service rows */}
         <ul className="reveal border-t border-brown/15">
