@@ -38,7 +38,15 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${lora.variable} ${jost.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        {/* Page-wide background image (repeats the hero background) */}
+        <div
+          aria-hidden
+          className="fixed inset-0 -z-50 bg-cover bg-center"
+          style={{ backgroundImage: "url('/hero-background.png')" }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

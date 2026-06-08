@@ -37,7 +37,7 @@ export default function Testimonials() {
   const go = (dir: number) => setIndex((i) => (i + dir + total) % total);
 
   return (
-    <section id="testimonials" className="bg-cream py-20">
+    <section id="testimonials" className="bg-cream/90 py-20">
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Testimonials" code="S1.5" />
 
@@ -49,7 +49,7 @@ export default function Testimonials() {
           {current.org}
         </p>
 
-        <blockquote className="reveal mt-10 max-w-4xl text-2xl font-medium leading-relaxed text-brown md:text-3xl">
+        <blockquote className="reveal mt-10 max-w-4xl font-mono text-xl font-medium leading-relaxed text-brown md:text-2xl">
           &ldquo;{current.quote}&rdquo;
         </blockquote>
 

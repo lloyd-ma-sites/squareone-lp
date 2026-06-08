@@ -23,32 +23,29 @@ export default function About() {
       <div className="reveal relative mx-auto max-w-6xl px-6">
         <SectionLabel label="About" code="S1.1" dark />
 
-        <h2 className="mt-10 max-w-4xl font-sans text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl">
-          Before confidence. Before decisions. There must be understanding.
-        </h2>
-
-        <div className="mt-16 grid gap-12 lg:grid-cols-2">
+        <div className="mt-12 grid gap-12 lg:grid-cols-2">
           {/* Founder portraits */}
-          <div>
-            <div className="grid grid-cols-2 gap-3">
-              {[1, 2, 3, 4].map((n) => (
-                <div
-                  key={n}
-                  className="relative aspect-[2/3] overflow-hidden rounded-lg bg-brown/40"
-                >
-                  <Image
-                    src={`/founder-image-${n}.jpeg`}
-                    alt={`JC Yap, Founder of SquareOne`}
-                    fill
-                    sizes="(max-width: 1024px) 50vw, 25vw"
-                    className="object-cover"
-                  />
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-2 gap-3">
+            {[1, 2, 3, 4].map((n) => (
+              <div
+                key={n}
+                className="relative aspect-[2/3] overflow-hidden rounded-lg bg-brown/40"
+              >
+                <Image
+                  src={`/founder-image-${n}.jpeg`}
+                  alt={`JC Yap, Founder of SquareOne`}
+                  fill
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
 
-            <div className="mt-6">
-              <p className="font-mono text-xs uppercase tracking-[0.2em] text-sage">
+          {/* Founder identity + narrative */}
+          <div>
+            <div className="mb-8">
+              <p className="font-mono text-sm uppercase tracking-[0.2em] text-sage">
                 Meet the Founder
               </p>
               <h3 className="mt-2 font-sans text-2xl font-medium">JC Yap</h3>
@@ -64,10 +61,8 @@ export default function About() {
                 LinkedIn <span aria-hidden>→</span>
               </a>
             </div>
-          </div>
 
-          {/* Founder narrative */}
-          <div className="space-y-5 font-mono text-base leading-7 text-cream/80">
+            <div className="space-y-5 font-mono text-base leading-7 text-cream/80">
             <p>
               Aged care is complex. Regulatory expectations continue to evolve,
               workforce challenges persist, and providers are expected to deliver
@@ -98,6 +93,7 @@ export default function About() {
               Australia, providing the clarity, confidence and support needed to
               navigate an increasingly complex sector.
             </p>
+            </div>
           </div>
         </div>
       </div>

@@ -41,7 +41,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-sand py-20">
+    <section id="services" className="bg-sand/90 py-20">
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Services" code="S1.3" />
 
@@ -58,7 +58,9 @@ export default function Services() {
                 <h3 className="font-sans text-xl font-medium uppercase tracking-wide text-brown md:text-2xl">
                   {service.title}
                 </h3>
-                <p className="text-sm leading-6 text-brown/70">{service.desc}</p>
+                <p className="font-mono text-sm leading-6 text-brown/70">
+                  {service.desc}
+                </p>
               </div>
             </li>
           ))}

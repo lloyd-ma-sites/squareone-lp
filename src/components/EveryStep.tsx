@@ -32,7 +32,7 @@ const benefits = [
 
 export default function EveryStep() {
   return (
-    <section id="every-step" className="bg-brown-dark py-20 text-cream">
+    <section id="every-step" className="bg-brown-dark/85 py-20 text-cream">
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Process" code="S1.4" dark />
 

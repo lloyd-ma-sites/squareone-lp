@@ -20,12 +20,12 @@ import SectionLabel from "@/components/SectionLabel";
 
 export default function Approach() {
   return (
-    <section id="approach" className="bg-sand py-20">
+    <section id="approach" className="bg-sand/90 py-20">
       <div className="reveal mx-auto max-w-6xl px-6">
         <SectionLabel label="Approach" code="S1.2" />
 
         <h2 className="mt-10 mb-12 max-w-4xl font-sans text-4xl font-medium leading-[1.05] tracking-tight text-olive md:text-6xl">
-          A proven path from start to sign-off.
+          Before confidence. Before decisions. There must be understanding.
         </h2>
 
         <ol className="grid gap-10 md:grid-cols-3">

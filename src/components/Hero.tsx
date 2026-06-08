@@ -18,8 +18,8 @@ export default function Hero() {
       <div className="hero-enter relative mx-auto flex w-full max-w-6xl flex-1 flex-col px-6">
         {/* Tagline, upper-right */}
         <div className="flex justify-end pt-28 md:pt-32">
-          <p className="max-w-xs text-right font-mono text-xs uppercase leading-relaxed tracking-[0.15em] text-cream/70">
-            A boutique advisory partner in all things clinical, compliance &amp;
+          <p className="max-w-sm text-right font-mono text-sm uppercase leading-relaxed tracking-[0.15em] text-cream/70 md:text-base">
+            Your boutique advisory partner in all things clinical, compliance &amp;
             operations.
           </p>
         </div>
