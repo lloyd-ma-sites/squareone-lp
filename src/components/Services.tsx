@@ -55,7 +55,7 @@ export default function Services() {
           {services.map((service) => (
             <li key={service.title}>
               <div className="grid gap-2 border-b border-brown/15 py-6 md:grid-cols-[1fr_2fr] md:items-center md:gap-8">
-                <h3 className="font-sans text-xl font-medium text-brown md:text-2xl">
+                <h3 className="font-sans text-xl font-medium uppercase tracking-wide text-brown md:text-2xl">
                   {service.title}
                 </h3>
                 <p className="text-sm leading-6 text-brown/70">{service.desc}</p>

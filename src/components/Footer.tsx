@@ -2,7 +2,7 @@ import Logo from "@/components/Logo";
 
 const columns = [
   { heading: "Navigate", links: ["About", "Approach", "Services", "Clients"] },
-  { heading: "Company", links: ["Insights", "Contact", "Privacy Policy", "Terms"] },
+  { heading: "Company", links: ["Contact", "Privacy Policy", "Terms"] },
 ];
 
 export default function Footer() {

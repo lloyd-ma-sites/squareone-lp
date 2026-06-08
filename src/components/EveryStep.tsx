@@ -5,25 +5,21 @@ const steps = [
     n: "01",
     title: "Strategy",
     desc: "Experts in the aged care regulatory requirements, guiding you with confidence.",
-    rotate: "-rotate-2",
   },
   {
     n: "02",
     title: "Communication",
     desc: "Trustworthy, accountable, and responsive to your unique needs.",
-    rotate: "rotate-1",
   },
   {
     n: "03",
     title: "Navigation",
     desc: "Turning insurmountable hurdles into on-time project milestones.",
-    rotate: "-rotate-1",
   },
   {
     n: "04",
     title: "Results",
     desc: "Reliable, compliant, and dedicated to delivering positive outcomes.",
-    rotate: "rotate-2",
   },
 ];
 
@@ -57,16 +53,14 @@ export default function EveryStep() {
           {steps.map((step) => (
             <div
               key={step.n}
-              className={`rounded-sm bg-cream p-6 text-brown shadow-lg transition-transform hover:rotate-0 ${step.rotate}`}
+              className="rounded-sm bg-cream p-6 text-brown shadow-lg transition-transform duration-300 hover:-translate-y-2"
             >
               <div className="flex items-start justify-between">
                 <h3 className="font-sans text-xl font-medium">{step.title}</h3>
                 <span className="font-mono text-lg text-olive">{step.n}</span>
               </div>
               <div className="my-4 border-t border-brown/15" />
-              <p className="font-mono text-xs uppercase leading-relaxed tracking-wide text-brown/70">
-                {step.desc}
-              </p>
+              <p className="text-sm leading-relaxed text-brown/70">{step.desc}</p>
             </div>
           ))}
         </div>
