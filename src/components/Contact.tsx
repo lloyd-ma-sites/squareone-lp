@@ -22,12 +22,12 @@ export default function Contact() {
     "w-full rounded-lg border border-brown/20 bg-cream px-4 py-3 text-brown placeholder-brown/40 focus:border-olive focus:outline-none focus:ring-1 focus:ring-olive";
 
   return (
-    <section id="contact" className="bg-cream/75 py-24">
-      <div className="reveal mx-auto max-w-3xl px-6 text-center">
+    <section id="contact" className="bg-cream/75 py-16 lg:flex lg:min-h-screen lg:flex-col lg:justify-center">
+      <div className="reveal mx-auto w-full max-w-3xl px-6 text-center">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-olive">
           Let&rsquo;s Connect
         </p>
-        <h2 className="mt-4 font-sans text-4xl font-medium tracking-tight text-brown md:text-6xl">
+        <h2 className="mt-4 font-sans text-4xl font-medium tracking-tight text-brown md:text-5xl">
           Drop us a line and let&rsquo;s connect.
         </h2>
         <p className="mt-4 text-lg leading-8 text-brown/75">
@@ -42,7 +42,7 @@ export default function Contact() {
           </a>
         </p>
 
-        <form onSubmit={handleSubmit} className="mt-12 space-y-4 text-left">
+        <form onSubmit={handleSubmit} className="mt-8 space-y-4 text-left">
           <div className="grid gap-4 sm:grid-cols-2">
             <input
               type="text"
@@ -63,7 +63,7 @@ export default function Contact() {
           </div>
           <textarea
             required
-            rows={5}
+            rows={4}
             placeholder="How can we help?"
             value={message}
             onChange={(e) => setMessage(e.target.value)}

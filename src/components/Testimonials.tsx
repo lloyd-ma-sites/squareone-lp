@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
 
 const testimonials = [
@@ -36,41 +37,61 @@ export default function Testimonials() {
   const current = testimonials[index];
   const go = (dir: number) => setIndex((i) => (i + dir + total) % total);
 
+  // Auto-advance every 10s; resets whenever the index changes (incl. manual nav).
+  useEffect(() => {
+    const id = setInterval(() => setIndex((i) => (i + 1) % total), 10000);
+    return () => clearInterval(id);
+  }, [index, total]);
+
   return (
-    <section id="testimonials" className="bg-cream/75 py-20">
+    <section id="testimonials" className="bg-cream/75 py-16 lg:flex lg:min-h-screen lg:flex-col lg:justify-center">
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Testimonials" code="S1.5" />
 
-        <h2 className="reveal mt-10 max-w-3xl font-sans text-4xl font-medium leading-[1.05] tracking-tight text-olive md:text-6xl">
-          Trusted by aged care providers.
-        </h2>
+        <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div className="reveal relative order-last aspect-[3/4] overflow-hidden rounded-lg bg-brown/10 lg:order-first">
+            <Image
+              src="/trusted-by.jpg"
+              alt="SquareOne, trusted by aged care providers"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
 
-        <blockquote className="reveal mt-12 max-w-3xl font-mono text-base leading-7 text-brown">
-          &ldquo;{current.quote}&rdquo;
-        </blockquote>
+          <div>
+            <h2 className="reveal max-w-3xl font-sans text-4xl font-medium leading-[1.05] tracking-tight text-olive md:text-6xl">
+              Trusted by aged care providers.
+            </h2>
 
-        <p className="reveal mt-6 font-mono text-sm text-brown/70">
-          &mdash; {current.role}, {current.org}
-        </p>
+            <blockquote className="reveal mt-10 max-w-3xl font-mono text-base leading-7 text-brown">
+              &ldquo;{current.quote}&rdquo;
+            </blockquote>
 
-        <div className="mt-12 flex items-center gap-6">
-          <button
-            onClick={() => go(-1)}
-            aria-label="Previous testimonial"
-            className="grid h-11 w-11 place-items-center border border-brown/20 text-brown transition-colors hover:bg-brown/5"
-          >
-            ←
-          </button>
-          <span className="font-mono text-sm tabular-nums text-brown/60">
-            {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
-          </span>
-          <button
-            onClick={() => go(1)}
-            aria-label="Next testimonial"
-            className="grid h-11 w-11 place-items-center border border-brown/20 text-brown transition-colors hover:bg-brown/5"
-          >
-            →
-          </button>
+            <p className="reveal mt-6 font-mono text-sm text-brown/70">
+              &mdash; {current.role}, {current.org}
+            </p>
+
+            <div className="mt-10 flex items-center gap-6">
+              <button
+                onClick={() => go(-1)}
+                aria-label="Previous testimonial"
+                className="grid h-11 w-11 place-items-center border border-brown/20 text-brown transition-colors hover:bg-brown/5"
+              >
+                ←
+              </button>
+              <span className="font-mono text-sm tabular-nums text-brown/60">
+                {String(index + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+              </span>
+              <button
+                onClick={() => go(1)}
+                aria-label="Next testimonial"
+                className="grid h-11 w-11 place-items-center border border-brown/20 text-brown transition-colors hover:bg-brown/5"
+              >
+                →
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

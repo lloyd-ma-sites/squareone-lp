@@ -78,29 +78,34 @@ body {
   }
 }
 
-/* ---- Cursor ripple effect ---- */
-@keyframes cursor-ripple {
-  from {
-    transform: translate(-50%, -50%) scale(0.4);
-    opacity: 0.5;
-  }
+/* ---- Hero draw-in line (segments animate in succession; timing is set
+   per-path inline in HeroLine.tsx, then static) ---- */
+@keyframes hero-line-draw {
   to {
-    transform: translate(-50%, -50%) scale(2.8);
-    opacity: 0;
+    stroke-dashoffset: 0;
   }
 }
 
-.cursor-ripple {
+@media (prefers-reduced-motion: reduce) {
+  .hero-line path {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}
+
+/* ---- Cursor glow (soft trail; colour set in JS to contrast with the
+   background under the pointer) ---- */
+.cursor-glow {
   position: absolute;
-  width: 96px;
-  height: 96px;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 480px;
   border-radius: 9999px;
-  background: radial-gradient(
-    circle,
-    rgba(111, 114, 80, 0.55) 0%,
-    rgba(111, 114, 80, 0) 72%
-  );
-  animation: cursor-ripple 1s ease-out forwards;
+  transition:
+    opacity 0.6s ease-out,
+    background 0.4s ease-out;
+  will-change: transform, opacity;
 }
 
 /* ---- Custom scrollbar (beige track, olive bar, brown arrows) ---- */

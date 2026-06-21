@@ -5,28 +5,33 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-brown-dark/75 py-20 text-cream"
+      className="bg-brown-dark/75 py-16 text-cream lg:flex lg:min-h-screen lg:flex-col lg:justify-center"
     >
       <div className="reveal relative mx-auto max-w-6xl px-6">
         <SectionLabel label="About" code="S1.1" dark />
 
         <div className="mt-12 grid gap-12 lg:grid-cols-2">
-          {/* Founder portraits */}
-          <div className="grid grid-cols-2 gap-3">
-            {[1, 2, 3, 4].map((n) => (
-              <div
-                key={n}
-                className="relative aspect-[2/3] overflow-hidden rounded-lg bg-brown/40"
-              >
-                <Image
-                  src={`/founder-image-${n}.jpeg`}
-                  alt={`JC Yap, Founder of SquareOne`}
-                  fill
-                  sizes="(max-width: 1024px) 50vw, 25vw"
-                  className="object-cover"
-                />
-              </div>
-            ))}
+          {/* Founder portraits — two photos stacked, slightly staggered. On lg
+              they split the column height so they start/end with the text. */}
+          <div className="space-y-6 lg:flex lg:h-full lg:flex-col lg:gap-4 lg:space-y-0">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-lg bg-brown/40 sm:w-5/6 lg:aspect-auto lg:min-h-0 lg:flex-1">
+              <Image
+                src="/about-top.jpg"
+                alt="JC Yap, Founder of SquareOne"
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover object-top"
+              />
+            </div>
+            <div className="relative ml-auto aspect-[3/4] overflow-hidden rounded-lg bg-brown/40 sm:w-5/6 lg:aspect-auto lg:min-h-0 lg:flex-1">
+              <Image
+                src="/about-bottom.jpg"
+                alt="JC Yap, Founder of SquareOne"
+                fill
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover object-top"
+              />
+            </div>
           </div>
 
           {/* Founder identity + narrative */}

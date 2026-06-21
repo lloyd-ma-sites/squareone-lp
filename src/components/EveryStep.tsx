@@ -1,3 +1,4 @@
+import Image from "next/image";
 import SectionLabel from "@/components/SectionLabel";
 
 const steps = [
@@ -32,21 +33,35 @@ const benefits = [
 
 export default function EveryStep() {
   return (
-    <section id="every-step" className="bg-brown-dark/75 py-20 text-cream">
+    <section id="every-step" className="bg-brown-dark/75 py-16 text-cream lg:flex lg:min-h-screen lg:flex-col lg:justify-center">
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Process" code="S1.4" dark />
 
-        {/* Giant headline (peg style) */}
-        <h2 className="reveal mt-10 max-w-4xl font-sans text-6xl font-medium leading-[0.95] tracking-tight md:text-8xl">
-          Here at every step.
-        </h2>
+        <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div>
+            {/* Giant headline (peg style) */}
+            <h2 className="reveal max-w-4xl font-sans text-6xl font-medium leading-[0.95] tracking-tight md:text-8xl">
+              Here at every step.
+            </h2>
 
-        <p className="reveal mt-8 max-w-2xl font-mono text-base leading-7 text-cream/70">
-          Navigating stakeholder expectations can feel like a balancing act for
-          boards, executives, management, and clinicians. We work with single-site
-          and multi-facility providers &mdash; every provider operates within its
-          own context.
-        </p>
+            <p className="reveal mt-8 max-w-2xl font-mono text-base leading-7 text-cream/70">
+              Navigating stakeholder expectations can feel like a balancing act for
+              boards, executives, management, and clinicians. We work with
+              single-site and multi-facility providers &mdash; every provider
+              operates within its own context.
+            </p>
+          </div>
+
+          <div className="reveal relative aspect-[4/5] overflow-hidden rounded-lg bg-brown/40">
+            <Image
+              src="/every-step.jpg"
+              alt="SquareOne working alongside aged care providers"
+              fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
 
         {/* Tilted numbered cards (peg style) */}
         <div className="reveal mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
