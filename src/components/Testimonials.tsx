@@ -49,7 +49,7 @@ export default function Testimonials() {
         <SectionLabel label="Testimonials" code="S1.5" />
 
         <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-center">
-          <div className="reveal relative order-last aspect-[3/4] overflow-hidden rounded-lg bg-brown/10 lg:order-first">
+          <div className="reveal relative order-last aspect-[3/4] overflow-hidden rounded-lg bg-brown/10 lg:order-first lg:w-3/4">
             <Image
               src="/trusted-by.jpg"
               alt="SquareOne, trusted by aged care providers"

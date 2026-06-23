@@ -12,7 +12,7 @@ export default function About() {
 
         {/* Single founder portrait floated so the narrative wraps cleanly around it */}
         <div className="mt-12">
-          <div className="mb-6 w-full overflow-hidden rounded-lg bg-brown/40 sm:float-left sm:mb-4 sm:mr-10 sm:w-2/5 lg:w-[38%]">
+          <div className="mb-6 w-3/4 overflow-hidden rounded-lg bg-brown/40 sm:float-left sm:mb-4 sm:mr-8 sm:w-[30%] lg:w-[28%]">
             <Image
               src="/about-top.jpg"
               alt="JC Yap, Founder of SquareOne"

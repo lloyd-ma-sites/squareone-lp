@@ -37,7 +37,7 @@ export default function EveryStep() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Process" code="S1.4" dark />
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-start">
+        <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-center">
           <div>
             <h2 className="reveal max-w-4xl font-sans text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl">
               Here at every step.
