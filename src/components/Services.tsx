@@ -46,7 +46,7 @@ export default function Services() {
         <SectionLabel label="Services" code="S1.3" />
 
         {/* Giant headline */}
-        <h2 className="reveal mt-10 mb-14 font-sans text-6xl font-medium leading-none tracking-tight text-olive md:text-8xl">
+        <h2 className="reveal mt-10 mb-14 max-w-4xl font-sans text-4xl font-medium leading-[1.05] tracking-tight text-olive md:text-6xl">
           Our Services
         </h2>
 

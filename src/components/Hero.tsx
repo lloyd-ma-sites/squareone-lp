@@ -12,7 +12,7 @@ export default function Hero() {
         <HeroLine />
 
         {/* Tagline, upper-right */}
-        <div className="relative z-10 flex justify-end pt-28 md:pt-32">
+        <div className="relative z-10 flex justify-end pt-10 md:pt-32">
           <p
             data-hero="tagline"
             className="max-w-sm text-right font-mono text-sm uppercase leading-relaxed tracking-[0.15em] text-cream/70 md:text-base"
@@ -24,7 +24,7 @@ export default function Hero() {
         {/* Wordmark + giant headline, lower-left. A real top margin keeps it
             clear of the tagline on small/medium screens; on lg the editorial
             mt-auto spreads tagline (top) and content (bottom) apart. */}
-        <div className="relative z-10 mt-24 pb-16 md:mt-32 md:pb-24 lg:mt-auto lg:pb-[11vh]">
+        <div className="relative z-10 mt-16 pb-16 md:mt-32 md:pb-24 lg:mt-auto lg:pb-[11vh]">
           <Image
             data-hero="wordmark"
             src="/squareone-wordmark.png"

@@ -26,7 +26,7 @@ const steps = [
 
 const benefits = [
   "Direct access to senior expertise, with the ability to scale when required",
-  "Advice shaped around your organisation – not a template",
+  "Advice shaped around your organisation, not a template",
   "Time taken to understand your systems, people and risks",
   "Practical, defensible recommendations",
 ];
@@ -37,19 +37,33 @@ export default function EveryStep() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionLabel label="Process" code="S1.4" dark />
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div className="mt-10 grid gap-10 lg:grid-cols-2 lg:items-start">
           <div>
-            {/* Giant headline (peg style) */}
-            <h2 className="reveal max-w-4xl font-sans text-6xl font-medium leading-[0.95] tracking-tight md:text-8xl">
+            <h2 className="reveal max-w-4xl font-sans text-4xl font-medium leading-[1.05] tracking-tight md:text-6xl">
               Here at every step.
             </h2>
 
-            <p className="reveal mt-8 max-w-2xl font-mono text-base leading-7 text-cream/70">
-              Navigating stakeholder expectations can feel like a balancing act for
-              boards, executives, management, and clinicians. We work with
-              single-site and multi-facility providers &mdash; every provider
+            <p className="reveal mt-6 max-w-2xl font-mono text-base leading-7 text-cream/70">
+              We work with single-site and multi-facility providers. Every provider
               operates within its own context.
             </p>
+
+            {/* Numbered cards, fitted to the left of the photo */}
+            <div className="reveal mt-10 grid gap-4 sm:grid-cols-2">
+              {steps.map((step) => (
+                <div
+                  key={step.n}
+                  className="rounded-sm bg-cream p-5 text-brown shadow-lg transition-transform duration-300 hover:-translate-y-1"
+                >
+                  <div className="flex items-start justify-between">
+                    <h3 className="font-sans text-lg font-medium">{step.title}</h3>
+                    <span className="font-mono text-base text-olive">{step.n}</span>
+                  </div>
+                  <div className="my-3 border-t border-brown/15" />
+                  <p className="text-sm leading-relaxed text-brown/70">{step.desc}</p>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="reveal relative aspect-[4/5] overflow-hidden rounded-lg bg-brown/40">
@@ -61,23 +75,6 @@ export default function EveryStep() {
               className="object-cover"
             />
           </div>
-        </div>
-
-        {/* Tilted numbered cards (peg style) */}
-        <div className="reveal mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step) => (
-            <div
-              key={step.n}
-              className="rounded-sm bg-cream p-6 text-brown shadow-lg transition-transform duration-300 hover:-translate-y-2"
-            >
-              <div className="flex items-start justify-between">
-                <h3 className="font-sans text-xl font-medium">{step.title}</h3>
-                <span className="font-mono text-lg text-olive">{step.n}</span>
-              </div>
-              <div className="my-4 border-t border-brown/15" />
-              <p className="text-sm leading-relaxed text-brown/70">{step.desc}</p>
-            </div>
-          ))}
         </div>
 
         {/* What this means for you */}

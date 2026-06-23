@@ -5,6 +5,27 @@ const columns = [
   { heading: "Company", links: ["Contact", "Privacy Policy", "Terms"] },
 ];
 
+function hrefFor(label: string): { href: string; external?: boolean } {
+  switch (label) {
+    case "Privacy Policy":
+      return { href: "/privacy", external: true };
+    case "Terms":
+      return { href: "/terms", external: true };
+    case "About":
+      return { href: "#about" };
+    case "Approach":
+      return { href: "#approach" };
+    case "Services":
+      return { href: "#services" };
+    case "Clients":
+      return { href: "#testimonials" };
+    case "Contact":
+      return { href: "#contact" };
+    default:
+      return { href: "#" };
+  }
+}
+
 export default function Footer() {
   return (
     <footer className="bg-brown-dark/75 text-cream">
@@ -25,43 +46,29 @@ export default function Footer() {
                 {col.heading}
               </h3>
               <ul className="mt-4 space-y-2 font-mono text-xs uppercase tracking-wider text-cream/80">
-                {col.links.map((link) => (
-                  <li key={link}>
-                    <a href="#" className="transition-colors hover:text-white">
-                      {link}
-                    </a>
-                  </li>
-                ))}
+                {col.links.map((link) => {
+                  const { href, external } = hrefFor(link);
+                  return (
+                    <li key={link}>
+                      <a
+                        href={href}
+                        {...(external
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
+                        className="transition-colors hover:text-white"
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
         </div>
 
-        {/* Stay in touch */}
-        <div className="mt-14 grid gap-8 border-t border-cream/15 pt-10 md:grid-cols-2">
-          <div className="font-mono text-xs uppercase tracking-[0.15em] text-cream/70">
-            Stay in touch&nbsp;&nbsp;|&nbsp;&nbsp;
-            <a href="mailto:jc@squareoneau.com" className="hover:text-white">
-              jc@squareoneau.com
-            </a>
-          </div>
-          <div className="flex gap-6 font-mono text-xs uppercase tracking-wider text-cream/70 md:justify-end">
-            <a href="#" className="hover:text-white">Facebook</a>
-            <a href="#" className="hover:text-white">Instagram</a>
-            <a
-              href="https://www.linkedin.com/in/mrjcyap/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white"
-            >
-              LinkedIn
-            </a>
-            <a href="#" className="hover:text-white">X</a>
-          </div>
-        </div>
-
         {/* Acknowledgement of Country */}
-        <div className="mt-12 border-t border-cream/10 pt-8">
+        <div className="mt-14 border-t border-cream/15 pt-10">
           <p className="max-w-4xl text-sm leading-7 text-cream/60">
             We acknowledge and pay our respects to the Traditional Custodians of
             the lands on which we live, work and learn throughout Australia. We
