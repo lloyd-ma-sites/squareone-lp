@@ -23,9 +23,33 @@ const jost = Jost({
 });
 
 export const metadata: Metadata = {
-  title: "SquareOne Solutions — Aged Care Advisory",
+  metadataBase: new URL("https://www.squareoneau.com"),
+  title: {
+    default: "SquareOne Solutions — Aged Care Advisory",
+    template: "%s — SquareOne Solutions",
+  },
   description:
-    "A boutique aged care advisory practice partnering with providers across Australia on clinical governance, compliance and operations.",
+    "SquareOne Solutions is a boutique aged care advisory practice partnering with providers across Australia on clinical governance, compliance and operations.",
+  keywords: [
+    "aged care advisory",
+    "aged care consultant",
+    "clinical governance",
+    "aged care compliance",
+    "regulatory readiness",
+    "aged care Australia",
+    "Aged Care Quality and Safety Commission",
+  ],
+  alternates: { canonical: "/" },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    locale: "en_AU",
+    url: "https://www.squareoneau.com",
+    siteName: "SquareOne Solutions",
+    title: "SquareOne Solutions — Aged Care Advisory",
+    description:
+      "A boutique aged care advisory practice partnering with providers across Australia on clinical governance, compliance and operations.",
+  },
 };
 
 export default function RootLayout({

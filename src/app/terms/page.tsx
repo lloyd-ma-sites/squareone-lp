@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LegalLayout, { Section, P, UL } from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions — SquareOne Solutions",
+  title: "Terms & Conditions",
   description:
     "The terms and conditions governing the use of the SquareOne Solutions website.",
 };

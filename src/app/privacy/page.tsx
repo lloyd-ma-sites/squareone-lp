@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import LegalLayout, { Section, P, UL } from "@/components/LegalLayout";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — SquareOne Solutions",
+  title: "Privacy Policy",
   description:
     "How SquareOne Solutions collects, uses, discloses and protects personal information in accordance with the Australian Privacy Act 1988 (Cth).",
 };
