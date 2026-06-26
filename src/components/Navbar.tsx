@@ -85,7 +85,7 @@ export default function Navbar() {
         <div className="border-t border-olive/15 bg-cream/95 backdrop-blur md:hidden">
           <ul className="mx-auto max-w-6xl px-6 py-2 font-mono text-sm uppercase tracking-[0.15em] text-brown/80">
             {navLinks.map((link) => (
-              <li key={link.href} className="border-b border-olive/10 last:border-0">
+              <li key={link.href} className="border-b border-olive/10">
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
@@ -95,16 +95,16 @@ export default function Navbar() {
                 </a>
               </li>
             ))}
+            <li>
+              <a
+                href="#contact"
+                onClick={() => setOpen(false)}
+                className="block py-3.5 transition-colors hover:text-olive"
+              >
+                Contact
+              </a>
+            </li>
           </ul>
-          <div className="mx-auto max-w-6xl px-6 pb-4">
-            <a
-              href="#contact"
-              onClick={() => setOpen(false)}
-              className="block bg-olive px-5 py-3 text-center font-mono text-xs uppercase tracking-widest text-cream transition-colors hover:bg-olive-dark"
-            >
-              Contact
-            </a>
-          </div>
         </div>
       )}
     </header>

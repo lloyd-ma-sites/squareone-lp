@@ -16,7 +16,7 @@ export default function About() {
             <Image
               src="/about-top.jpg"
               alt="JC Yap, Founder of SquareOne"
-              width={1085}
+              width={1280}
               height={1600}
               sizes="(max-width: 640px) 100vw, 40vw"
               className="h-auto w-full object-cover"
