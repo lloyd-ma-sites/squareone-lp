@@ -35,8 +35,7 @@ export default function Footer() {
           <div>
             <Logo light className="h-10 w-auto" />
             <p className="mt-5 max-w-xs font-mono text-xs uppercase leading-relaxed tracking-wide text-cream/60">
-              A boutique aged care advisory practice partnering with providers
-              across Australia.
+              Your partner in aged care governance, compliance, and operations.
             </p>
           </div>
 

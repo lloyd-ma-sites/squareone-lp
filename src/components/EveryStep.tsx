@@ -45,7 +45,7 @@ export default function EveryStep() {
 
             <p className="reveal mt-6 max-w-2xl font-mono text-base leading-7 text-cream/70">
               We work with single-site and multi-facility providers. Every provider
-              operates within its own context.
+              operates within their context.
             </p>
 
             {/* Numbered cards, fitted to the left of the photo */}

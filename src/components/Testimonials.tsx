@@ -9,25 +9,25 @@ const testimonials = [
     quote:
       "JC has a unique ability to quickly identify where the real risks sit. What stood out was not just the depth of the review, but the clarity of the recommendations and how practical they were to implement.",
     role: "Chief Executive Officer",
-    org: "Residential Aged Care Provider",
+    org: "multi-facility residential care provider, metro NSW",
   },
   {
     quote:
       "The engagement brought structure and direction to an otherwise complex and uncertain situation. It gave both the executive team and Board confidence in the path forward.",
     role: "Board Member",
-    org: "Aged Care Organisation",
+    org: "multi-facility residential care provider, metro VIC",
   },
   {
     quote:
       "JC's approach to clinical governance is both strategic and practical. He was able to bridge the gap between policy, systems and what is happening on the floor.",
-    role: "Executive Manager",
-    org: "Clinical Governance",
+    role: "Executive Manager of Clinical Governance",
+    org: "residential and support at home provider, regional NSW",
   },
   {
     quote:
       "This was not a generic audit. The work was clearly tailored to how our service actually operates, with a strong understanding of what the Commission expects.",
     role: "Director of Nursing",
-    org: "Aged Care Provider",
+    org: "single-facility residential care provider, regional VIC",
   },
 ];
 

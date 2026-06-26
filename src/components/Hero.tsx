@@ -61,7 +61,7 @@ export default function Hero() {
             <p>
               We&rsquo;re a boutique advisory practice working closely with a
               select number of providers to ensure every engagement receives the
-              depth of attention it requires. Our model prioritises quality of
+              depth of attention required. Our model prioritises quality of
               engagement over volume, allowing us to provide a level of
               responsiveness, continuity and insight that is often lost in
               larger-scale consulting environments.

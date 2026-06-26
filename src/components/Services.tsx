@@ -11,7 +11,7 @@ const services = [
   },
   {
     title: "Board Advisory",
-    desc: "Independent clinical advisory to Boards and Committees to support oversight, risk management and informed decisions.",
+    desc: "Independent clinical advisory to boards and committees to support oversight, risk management and informed decisions.",
   },
   {
     title: "Compliance Remediation",
@@ -19,7 +19,7 @@ const services = [
   },
   {
     title: "External Audit & Regulatory Readiness",
-    desc: "Preparation for Commission audits, registration and re-registration, including documentation and evidence review.",
+    desc: "Preparation for regulatory audits, registration and re-registration, including documentation and evidence review.",
   },
   {
     title: "Clinical Funding",

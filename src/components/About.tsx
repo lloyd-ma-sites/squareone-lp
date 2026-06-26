@@ -51,8 +51,8 @@ export default function About() {
             <p>
               I&rsquo;ve spent my career working alongside aged care providers,
               supporting Boards, executives and operational leaders through some of
-              their most challenging periods &mdash; audits, remediation programs,
-              governance reform, commissioning projects and organisational change.
+              their most challenging periods, external audits, remediation programs,
+              governance reform, commissioning projects, and organisational change.
             </p>
             <p>
               What I&rsquo;ve learnt is that most providers don&rsquo;t need more
@@ -69,8 +69,8 @@ export default function About() {
             </p>
             <p>
               Today, SquareOne partners with aged care organisations across
-              Australia, providing the clarity, confidence and support needed to
-              navigate an increasingly complex sector.
+              Australia, providing the confidence and support needed to navigate an
+              increasingly complex sector.
             </p>
           </div>
 

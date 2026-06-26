@@ -1,7 +1,7 @@
 const steps = [
   {
     n: "01",
-    title: "Built on Understanding",
+    title: "Built on understanding",
     desc: "We work closely with you, taking the time to understand your organisation, your people and your challenges as if they were our own.",
   },
   {
@@ -25,7 +25,7 @@ export default function Approach() {
         <SectionLabel label="Approach" code="S1.2" />
 
         <h2 className="mt-10 mb-12 max-w-4xl font-sans text-4xl font-medium leading-[1.05] tracking-tight text-olive md:text-6xl">
-          Before confidence. Before decisions. There must be understanding.
+          Before confidence, before decisions, there must be understanding.
         </h2>
 
         <ol className="grid gap-10 md:grid-cols-3">
