@@ -17,6 +17,12 @@ export function Section({
   );
 }
 
+export function H3({ children }: { children: React.ReactNode }) {
+  return (
+    <h3 className="pt-1 font-sans text-base font-medium text-brown">{children}</h3>
+  );
+}
+
 export function P({ children }: { children: React.ReactNode }) {
   return <p className="text-[15px] leading-7 text-brown/80">{children}</p>;
 }
